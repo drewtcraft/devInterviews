@@ -9,6 +9,7 @@ export default class InterviewForm extends React.Component {
     }
 
     this.addQuestion = this.addQuestion.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   addQuestion(e){
@@ -57,6 +58,10 @@ export default class InterviewForm extends React.Component {
         questions: prevState.questions.filter((_el, _i)=>i!==_i)
       }
     })
+  }
+
+  handleSubmit(){
+
   }
 
   render() {
