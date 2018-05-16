@@ -1,4 +1,5 @@
 import React from 'react';
+import MyEditor from './Editor.js'
 
 export default class InterviewForm extends React.Component {
 
@@ -69,14 +70,18 @@ export default class InterviewForm extends React.Component {
     const questions = this.state.questions.map((el, i)=>{
       return (
         <div key={i}>
-          <p>question</p>
-          <input type="text" onChange={(e)=>{this.editQuestion(i, e.target.value)}}
-            value={this.state.questions[i].question}
-            placeholder="question" />
-          <p>answer</p>
-          <input type="text" onChange={(e)=>{this.editAnswer(i, e.target.value)}}
-            value={this.state.questions[i].answer}
-            placeholder="answer" />
+          <div className="labeledRow">
+            <p>question</p>
+            <input type="text" onChange={(e)=>{this.editQuestion(i, e.target.value)}}
+              value={this.state.questions[i].question}
+              placeholder="question" />
+          </div>
+          <div className="labeledRow">
+            <p>answer</p>
+            <input type="text" onChange={(e)=>{this.editAnswer(i, e.target.value)}}
+              value={this.state.questions[i].answer}
+              placeholder="answer" />
+            </div>
           <button onClick={(e)=>{this.deleteQuestion(i, e)}}>delete question</button>
         </div>
       )
@@ -93,7 +98,9 @@ export default class InterviewForm extends React.Component {
           <p>questions you were asked in the interview</p>
           {questions}
           <button onClick={this.addQuestion}>add new question</button>
+          <button type="Submit">Submit</button>
         </form>
+        
 
 
 

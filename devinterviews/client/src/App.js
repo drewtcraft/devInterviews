@@ -1,5 +1,7 @@
 import React from 'react';
 import InterviewForm from './InterviewForm.js'
+import Header from './Header.js'
+import { Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends React.Component {
@@ -7,6 +9,10 @@ class App extends React.Component {
   constructor(props){
     super(props)
     this.state={
+      user: true,
+      interview: {},
+      comments: []
+
 
     }
   }
@@ -14,7 +20,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <InterviewForm />
+      <Header user={this.state.user} />
+      <Switch>
+        <Route exact path="/post" component={InterviewForm} />
+      </Switch>
       </div>
     );
   }
