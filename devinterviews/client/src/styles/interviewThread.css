@@ -1,0 +1,106 @@
+.label {
+  font-size:80%;
+  margin: 0 0 3px 15px;
+  font-family: 'Roboto';
+  font-weight: 400;
+
+}
+
+.interviewField {
+  padding: 10px;
+  margin: 0 0 15px 0;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  padding-right: 5%;
+  padding-left: 5%;
+  word-wrap: break-word;
+}
+
+.question {
+  width: 95%;
+  padding: 10px 2.5%;
+  border-radius: 5px;
+  margin:0 0 25px 0;
+  background-color: rgb(240, 240, 240);
+
+
+}
+
+.questionContainer, .tagsContainer {
+  display:block;
+  position: relative;
+  min-height: 100px;
+  border-radius: 5px;
+  width: 95%;
+  padding: 20px  2.5%;
+}
+
+.questionContainer {
+  min-height: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+
+.question .codeEditor {
+  width: 80% !important
+}
+
+.interviewHeader {
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+  padding: 20px 0 20px 0;
+}
+
+.interviewHeader h2 {
+  padding-bottom:10px;
+  font-weight:500;
+}
+
+.questionLink {
+  text-decoration: none;
+  font-size: 80%;
+  float:right;
+  margin: 5px 0 0 0;
+  color: rgb(100,100, 100);
+
+}
+
+.questionLink:hover {
+  color:red;
+  cursor:pointer;
+}
+
+.tagsContainer {
+  min-height: 0;
+  background-color: white ;
+  padding-top: 25px;
+  padding-bottom: 0px;
+
+}
+
+.tag {
+  font-size: 12px;
+  padding: 10px 15px;
+  background-color: rgb(235, 235, 235);
+  display:inline-block;
+  border-radius: 20px;
+  color:black;
+  margin: 0px 5px;
+}
+
+.tag:hover {
+    background-color: rgb(140, 140, 140);
+    color: white;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+

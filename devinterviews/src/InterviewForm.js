@@ -1,5 +1,6 @@
 import React from 'react';
 import MyEditor from './Editor.js'
+const axios = require('axios')
 
 export default class InterviewForm extends React.Component {
 
@@ -11,6 +12,7 @@ export default class InterviewForm extends React.Component {
 
     this.addQuestion = this.addQuestion.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.trashFunction = this.trashFunction.bind(this)
   }
 
   addQuestion(e){
@@ -65,6 +67,13 @@ export default class InterviewForm extends React.Component {
 
   }
 
+  trashFunction(){
+    axios.post('/getem', 1)
+      .then((data)=>{
+        console.log('this the data', data)
+      })
+  }
+
   render() {
 
     const questions = this.state.questions.map((el, i)=>{
@@ -98,9 +107,11 @@ export default class InterviewForm extends React.Component {
           <p>questions you were asked in the interview</p>
           {questions}
           <button onClick={this.addQuestion}>add new question</button>
-          <button type="Submit">Submit</button>
+          <button type="Submit">penis</button>
+          <button onClick={this.trashFunction}>trash</button>
+
         </form>
-        
+
 
 
 

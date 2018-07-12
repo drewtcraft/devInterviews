@@ -21,9 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
       <Header user={this.state.user} />
-      <Switch>
-        <Route exact path="/post" component={InterviewForm} />
-      </Switch>
+
       </div>
     );
   }

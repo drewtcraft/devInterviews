@@ -1,10 +1,26 @@
-body, h1, h2, h3, h4, p, a, div {
+body, h1, h2, h3, h4, p, a, div, .link {
   padding: 0;
   margin: 0
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240, 240, 240);
+  display:flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -32,45 +48,484 @@ body, h1, h2, h3, h4, p, a, div {
   to { transform: rotate(360deg); }
 }
 
-.header {
-  width: 100%;
-  height: 80px;
-  background-color: grey;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.header h1, a {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.header a {
-}
 
 .labeledRow {
 
 }
 
-.editor{
-  width: 200px;
-  height: 100px;
-  display: block;
-  background-color:red;
-}
 
-* {
- box-sizing: border-box;
-}
+
 #content {
  width: 480px;
  margin: 0 auto;
 }
+
 .editor {
  border: 1px solid grey;
  padding: 6px;
 }
+
+.post {
+  width: 100%;
+  height: 150px;
+  display: block;
+  position:relative;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  margin: 15px 0;
+  color: rgb(50, 50, 50);
+
+}
+
+.post:hover {
+  background-color:rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+.info {
+  width: calc(100% - 40px);
+  min-height: 140px;
+  display:block;
+}
+
+.post h2{
+  padding: 10px 0 0px 10px;
+    color: rgb(50, 50, 50);
+    font-weight: 400;
+
+}
+
+.post h4{
+  margin: 0 0 0 20px;
+  font-size: 12px;
+    color: rgb(50, 50, 50);
+        font-weight: 100;
+
+
+}
+
+.post p {
+  margin: 20px;
+  color: rgb(50, 50, 50);
+  width: 80%;
+  font-weight: 100;
+  font-family: 'Roboto'
+
+
+}
+
+.link{
+  display:block;
+  text-decoration: none;
+  color: black;
+  position:relative;
+
+}
+
+ .voteContainer button {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  border:0;
+  outline: 0;
+  font-size: 25px;
+  background-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 0 rgb(150, 150, 150);
+}
+
+ .voteContainer button:hover {
+  color:transparent;
+  text-shadow: 0 0 0 black;
+  cursor: pointer;
+}
+
+
+ .voteContainer {
+  width:20%;
+  display:block;
+  position:absolute;
+  right: 0;
+  text-align:center;
+  top: 0;
+  height:100px;
+  margin-top: 25px;
+}
+
+.section, .thread {
+  display:flex;
+  flex-direction: column;
+  width: 70%;
+  padding:0 5%;
+  background-color:white;
+  box-shadow: 0px 5px 10px rgb(220,220,220);
+  max-width: 800px;
+  flex-grow: 1;
+  padding-bottom: 50px;
+}
+
+
+.comment{
+  display:block;
+  position: relative;
+  width: 80%;
+  min-height: 100px;
+}
+.info .DraftEditor-editorContainer {
+  width: 90% !important;
+}
+
+.comment {
+  background-color: rgb(240, 240, 240);
+  margin: 5px 0;
+  padding: 20px 10% 20px 6% ;
+  border-radius: 5px;
+}
+
+.comment p {
+  font-size: 10px;
+}
+
+.bold {
+  font-weight:bold;
+  font-size: 12px;
+}
+
+
+.hightlightedButton {
+  color:transparent !important;
+  text-shadow: 0 0 0 black !important;
+}
+
+.auth{
+  width: 70%;
+  margin: 0 0 0 15%;
+
+}
+
+.auth input {
+  padding: 10px 20px;
+  outline: none;
+  border:none;
+  border-radius: 20px;
+  background-color: white;
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.auth button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(220, 220, 220, 1);
+  display: block;
+  width: 100px;
+  padding: 10px;
+  margin: 0 auto 50px auto;
+
+}
+
+.auth .link {
+  color:grey;
+  margin-left: 10px;
+  width: 50px;
+  font-size: 80%;
+}
+.auth .link:hover {
+  color:red;
+}
+
+.auth button:hover {
+  color: white;
+  background-color: rgba(100, 100, 100, 1);
+  cursor: pointer
+}
+
+.authTitle{
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.authError{
+  color: red;
+}
+
+input, textarea {
+  padding: 10px 20px;
+  outline: none;
+  border:none;
+  border-radius: 20px;
+  background-color: rgba(240, 240, 240, 1);
+  display: block;
+  width: 400px;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.DraftEditor-editorContainer,.DraftEditor-root,.public-DraftEditor-content{height:inherit;text-align:initial}.public-DraftEditor-content[contenteditable=true]{-webkit-user-modify:read-write-plaintext-only}.DraftEditor-root{position:relative}.DraftEditor-editorContainer{background-color:rgba(255,255,255,0);border-left:.1px solid transparent;position:relative;z-index:1}.public-DraftEditor-block{position:relative}.DraftEditor-alignLeft .public-DraftStyleDefault-block{text-align:left}.DraftEditor-alignLeft .public-DraftEditorPlaceholder-root{left:0;text-align:left}.DraftEditor-alignCenter .public-DraftStyleDefault-block{text-align:center}.DraftEditor-alignCenter .public-DraftEditorPlaceholder-root{margin:0 auto;text-align:center;width:100%}.DraftEditor-alignRight .public-DraftStyleDefault-block{text-align:right}.DraftEditor-alignRight .public-DraftEditorPlaceholder-root{right:0;text-align:right}.public-DraftEditorPlaceholder-root{color:#9197a3;position:absolute;z-index:1}.public-DraftEditorPlaceholder-hasFocus{color:#bdc1c9}.DraftEditorPlaceholder-hidden{display:none}.public-DraftStyleDefault-block{position:relative;white-space:pre-wrap}.public-DraftStyleDefault-ltr{direction:ltr;text-align:left}.public-DraftStyleDefault-rtl{direction:rtl;text-align:right}.public-DraftStyleDefault-listLTR{direction:ltr}.public-DraftStyleDefault-listRTL{direction:rtl}.public-DraftStyleDefault-ol,.public-DraftStyleDefault-ul{margin:16px 0;padding:0}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR{margin-left:1.5em}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listRTL{margin-right:1.5em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR{margin-left:3em}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listRTL{margin-right:3em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR{margin-left:4.5em}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listRTL{margin-right:4.5em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR{margin-left:6em}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listRTL{margin-right:6em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR{margin-left:7.5em}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listRTL{margin-right:7.5em}.public-DraftStyleDefault-unorderedListItem{list-style-type:square;position:relative}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0{list-style-type:disc}.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1{list-style-type:circle}.public-DraftStyleDefault-orderedListItem{list-style-type:none;position:relative}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before{left:-36px;position:absolute;text-align:right;width:30px}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listRTL:before{position:absolute;right:-36px;text-align:left;width:30px}.public-DraftStyleDefault-orderedListItem:before{content:counter(ol0) ". ";counter-increment:ol0}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before{content:counter(ol1) ". ";counter-increment:ol1}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before{content:counter(ol2) ". ";counter-increment:ol2}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before{content:counter(ol3) ". ";counter-increment:ol3}.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before{content:counter(ol4) ". ";counter-increment:ol4}.public-DraftStyleDefault-depth0.public-DraftStyleDefault-reset{counter-reset:ol0}.public-DraftStyleDefault-depth1.public-DraftStyleDefault-reset{counter-reset:ol1}.public-DraftStyleDefault-depth2.public-DraftStyleDefault-reset{counter-reset:ol2}.public-DraftStyleDefault-depth3.public-DraftStyleDefault-reset{counter-reset:ol3}.public-DraftStyleDefault-depth4.public-DraftStyleDefault-reset{counter-reset:ol4}
+
+
+.codeEditor .DraftEditor-editorContainer {
+  padding: 10px 20px;
+  outline: none;
+  border:none;
+  border-radius: 5px;
+  background-color: rgba(230, 230, 230, 1);
+  display: block;
+  width: 90%;
+  margin: 20px auto 5px auto;
+  font-size: 14px;
+
+}
+
+.codeEditor {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(240, 240, 240);
+  padding: 5px 0 10px 0;
+  margin: 10px 0;
+}
+
+.public-DraftEditor-content{
+  min-height:80px;
+}
+
+.superFancyBlockquote {
+  color: black;
+  padding: 2px 5px;
+
+}
+
+ .contentFul  .DraftEditor-editorContainer {
+  padding: 10px 20px;
+  outline: none;
+  border: none !important;
+  border-radius: 0 !important;
+  display: block;
+  width: 100%;
+  background-color: white;
+  font-size: 14px;
+
+}
+
+.contentFul .public-DraftEditor-content{
+  min-height: 20px;
+}
+
+.codeEditor .button{
+  outline: 0;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size:10px;
+  margin: 10px 0 -10px 20px;
+  color: white;
+  background-color: rgb(150, 150, 150);
+  display:inline-block;
+  padding: 0px 15px;
+}
+
+.codeEditor .button:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  cursor: pointer
+}
+
+.commentForm{
+  margin: 30px 0 60px 0;
+}
+
+.commentForm h2 {
+  margin: 0 0 0 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.commentForm button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(220, 220, 220, 1);
+  display: block;
+  width: 100px;
+  padding: 10px;
+  margin: 10px auto;
+
+}
+
+.commentForm button:hover {
+  color: white;
+  background-color: rgba(100, 100, 100, 1);
+  cursor: pointer
+}
+
+.edit, .delete {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 0;
+  float: right;
+  margin: 0 10px;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  margin-top: -20px;
+}
+
+.edit:hover, .delete:hover {
+  color:red;
+  background-color:lightgrey;
+  cursor:pointer;
+}
+
+.pageTitle {
+  margin: 20px 0 0 0;
+  font-family: 'Raleway';
+  font-weight: 600
+}
+
+.tagLink {
+  color: rgb(100, 100, 100);
+  padding:5px 5px;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 2px ;
+  white-space: nowrap;
+  display:inline-block;
+}
+
+.tagLink:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.tagLinksContainer {
+  padding: 10px ;
+  width: 50%;
+  align-self: flex-end;
+  margin-top: -40px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:
+}
+
+.tagLinksContainer p {
+  display:block;
+  font-size: 15px;
+  margin: 5px 10px 10px 0;
+}
+
+.question .DraftEditor-editorContainer{
+  margin-bottom: 10px;
+
+}
+
+.generalButton {
+  color: white;
+  background-color: rgb(150,150,150);
+  outline: none;
+  border:none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  margin: 0 auto 5px auto;
+  display:block;
+}
+
+.generalButton:hover {
+  color:black;
+  background-color:rgb(240,240,240);
+  cursor:pointer;
+}
+
+
+.submitButton  {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(220, 220, 220, 1);
+  display: block;
+  width: 100px;
+  padding: 10px;
+  margin: 30px auto 50px auto;
+
+}
+
+.submitButton:hover {
+  color: white;
+  background-color: rgba(100, 100, 100, 1);
+  cursor: pointer
+}
+
+.tagButton{
+  padding: 2px 0px;
+  margin: 5px 0px 5px 5px;
+  display: inline-block;
+  vertical-align: middle;
+  height:20px;
+  width: 20px;
+}
+
+.tagButton:hover {
+  cursor:pointer;
+}
+
+.tagTag {
+  background-color:rgb(200, 200, 200);
+  display: inline-block;
+  padding: 5px 10px;
+  font-size:80%;
+  border-radius: 15px;
+  margin: 5px 10px;
+
+}
+
+.tagTag p {
+    display: inline-block;
+}
+
+.quest {
+  margin-bottom: 70px;
+}
+
+.quest p {
+float:right;
+font-size: 80%;
+margin: 5px 15px 0 0;
+color: rgb(100,100, 100);
+}
+
+.rightButton {
+  float:right;
+}
+
+.littleMessage {
+  font-size: 80%;
+  padding: 20px 40px;
+  color: rgb(150, 150, 150)
+}
+
+.footer {
+  background-color: grey;
+  color: white;
+  display:block;
+  padding: 10px 0;
+  display:block;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+
+

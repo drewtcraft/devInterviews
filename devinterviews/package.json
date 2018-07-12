@@ -7,13 +7,17 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.2",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
     "morgan": "^1.9.0",
-    "nodemon": "^1.17.4",
+    "nodemon": "^1.17.5",
+    "npm": "^6.1.0",
     "pg-promise": "^8.4.4"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.1"
   }
 }
